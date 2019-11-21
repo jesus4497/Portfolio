@@ -28,39 +28,43 @@ const NavBar = styled.ul`
             &:after{
                 width: calc(100% - 3.75rem)
             }
+            @media (max-width: 700px) {
+                width: calc(100% - 10px);
+            }
         }
     }
-
-  
+   
 
 `;
+
+
 
 
 const Nav = () => (
     <NavBar>
         <li>
-            <Link href="/">
+            <Link href="#aboutme">
                 <a>About Me</a>
             </Link>
             
         </li>
 
         <li>
-            <Link href="/">
+            <Link href="#skills">
                 <a>My Skills</a>
             </Link>
             
         </li>
 
         <li>
-            <Link href="/">
+            <Link href="#projects">
                 <a>My Projects</a>
             </Link>
             
         </li>
 
         <li>
-            <Link href="/">
+            <Link href="#contact">
                 <a >Contact Me</a>
             </Link>
             
