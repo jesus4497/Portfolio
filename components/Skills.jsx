@@ -4,7 +4,6 @@ import getIcons from '../lib/getIcons'
 
 
 const SkillsStyles = styled.section`
-    max-height: 100vh;
     text-align: center;
     padding: 2rem;
 
@@ -16,7 +15,6 @@ const SkillsStyles = styled.section`
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
-
 
         img{
             height: 15rem;
@@ -30,7 +28,6 @@ const SkillsStyles = styled.section`
             img, svg{
                 height: 4rem;
             }
-        
 
             @media screen and (max-width: 400px){
                 grid-template-columns: 4rem 4rem 4rem;
@@ -39,14 +36,10 @@ const SkillsStyles = styled.section`
         }
 
         @media screen and (max-width: 1600px){
-           
-
             .platforms{
                 grid-template-columns: 4rem 4rem 4rem;
                 gap: 1.5rem
             }
-
-
         }
 
         @media screen and (max-width: 850px){
@@ -56,7 +49,6 @@ const SkillsStyles = styled.section`
             justify-self: center;
             align-items: center;
             margin-bottom:5rem;
-           
         }
 
         h2{
@@ -75,9 +67,8 @@ const SkillsStyles = styled.section`
             }
         }
         
-
-        
     }
+
     p{
         font-size: 1.3rem;
         display: flex;
@@ -85,7 +76,6 @@ const SkillsStyles = styled.section`
         margin: 0 auto; 
         margin-top:2rem;
         margin-bottom:3rem;
-       
     }
     
 
@@ -98,27 +88,21 @@ const SkillsStyles = styled.section`
     @media screen and (max-width: 1600px){
             font-size: 1rem;
             width: auto;
-            margin-bottom: 20rem;
             p{
                 font-size: 1.2rem;
                 width: 50vh;
             }
-
     }
 
     @media screen and (max-width: 850px){
-            margin-bottom: 20rem;
             p{
                 width: auto;
             }
-
     }
 
     @media screen and (max-width: 400px){
             font-size: 1rem;
             width: auto;
-            margin-bottom: 45rem;
-                
     }
 
    

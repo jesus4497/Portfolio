@@ -13,7 +13,7 @@ const Item = styled.div`
   margin-top: 5rem;
   img {
     width: 100%;
-    height: 25rem;
+    height: 15rem;
     object-fit: cover;
   }
   p {
@@ -50,6 +50,11 @@ const Item = styled.div`
     }
   }
 
+  @media screen and (max-width: 780px){
+      img{
+        height: 1rem;
+      }
+  }
 `;
 
 const Title = styled.h1`
@@ -70,10 +75,7 @@ const Title = styled.h1`
         @media screen and (max-width:600px){
           font-size: 2rem;
         }
-
     }
-    
-
 `;
     
 const Project = ({ link, title, description, imag, demo, git}) => (

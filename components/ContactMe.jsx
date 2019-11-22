@@ -67,7 +67,6 @@ const ContactStyles = styled.section`
             }
         }
     }
-
 `;
 
 const ContactMe = () => (
