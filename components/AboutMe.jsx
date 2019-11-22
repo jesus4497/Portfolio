@@ -43,7 +43,9 @@ const AboutMe = () => (
             
             <img  src='/img/perfil.png' alt="Perfil"/>
                 <p>
-                   Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience<br/> in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering<br/> graduate. Looking to join high-performing teams.
+                   Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience<br/> 
+                   in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering<br/> 
+                   graduate. Looking to join high-performing teams.
                 </p>
         </div>
     </AboutStyles>
