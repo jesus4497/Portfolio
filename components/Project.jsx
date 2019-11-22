@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Tilt from 'react-tilt';
-import Carousel from '../components/Carousel'
+import Carousel from '../components/Carousel';
+import Slide from 'react-reveal/LightSpeed';
 
 const Item = styled.div`
   background: white;
@@ -76,34 +77,38 @@ const Title = styled.h1`
 `;
     
 const Project = ({ link, title, description, imag, demo, git}) => (
-  <Tilt 
-    className="Tilt" 
-    options={{ 
-      max : 15,
-      perspective: 1500,
-    }} 
-  >
-    <Item>
-            <Carousel title={title} img={imag} />
-            <Title>
-              <a href={link}>{title}</a>
-            </Title>
-            <p>{description}</p> 
+  <Slide>
 
-            <div className="buttonList">
-                <Link href={git}>
-                    <a>View Code</a>
-                </Link>
-                { demo &&
-                <Link href={demo}>
-                  <a>View Demo</a>
-                </Link>
-                }
-                
+  
+    <Tilt 
+      className="Tilt" 
+      options={{ 
+        max : 15,
+        perspective: 1500,
+      }} 
+    >
+      <Item>
+              <Carousel title={title} img={imag} />
+              <Title>
+                <a href={link}>{title}</a>
+              </Title>
+              <p>{description}</p> 
 
-            </div>
-        </Item>
-  </Tilt>
+              <div className="buttonList">
+                  <Link href={git}>
+                      <a>View Code</a>
+                  </Link>
+                  { demo &&
+                  <Link href={demo}>
+                    <a>View Demo</a>
+                  </Link>
+                  }
+                  
+
+              </div>
+          </Item>
+    </Tilt>
+  </Slide>
    
 )
 

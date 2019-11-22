@@ -233,7 +233,7 @@ const Carousel = props =>(
             </div>
 
         </div>
-</CarouselStyles>
+    </CarouselStyles>
 )
 
 export default Carousel;
