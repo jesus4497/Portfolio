@@ -83,7 +83,7 @@ const SkillsStyles = styled.section`
         display: flex;
         width: 50vh;
         margin: 0 auto; 
-        margin-top:3rem;
+        margin-top:2rem;
         margin-bottom:3rem;
        
     }
