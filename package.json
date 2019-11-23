@@ -21,5 +21,40 @@
     "react-reveal": "^1.2.2",
     "react-tilt": "^0.1.4",
     "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6"
+  },
+  "babel":{
+    "env": {
+      "development":{
+        "presets":[
+          "next/babel"
+        ],
+        "plugins":[
+          [
+            "styled-components",
+              {
+                "ssr": true
+              }
+          ]
+        ]
+          
+      },
+      "production":{
+        "presets":[
+          "next/babel"
+        ],
+        "plugins":[
+          [
+            "styled-components",
+              {
+                "ssr": true
+              }
+          ]
+        ]
+          
+      }
+    }
   }
 }
