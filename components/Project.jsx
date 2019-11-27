@@ -45,7 +45,7 @@ const Item = styled.div`
       color: black;
 
       &:hover{
-        color: lightgrey;
+        color: ${props => props.theme.secondaryColor};
       }
     }
   }

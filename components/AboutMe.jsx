@@ -8,6 +8,7 @@ const AboutStyles = styled.section`
     background-size:cover;
     background-position: 50%;
     color: white;
+    background-repeat: no-repeat;
     
     .about{
         margin: 0 auto;
@@ -16,8 +17,6 @@ const AboutStyles = styled.section`
 
        p{
            font-size:1.3rem;
-           @media screen and (max-width:600px){
-           }
 
            
        }
@@ -43,8 +42,8 @@ const AboutMe = () => (
             
             <img  src='/img/perfil.png' alt="Perfil"/>
                 <p>
-                   Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience<br/> 
-                   in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering<br/> 
+                   Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience<br/>
+                   in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering<br/>
                    graduate. Looking to join high-performing teams.
                 </p>
         </div>

@@ -72,7 +72,7 @@ const SkillsStyles = styled.section`
     p{
         font-size: 1.3rem;
         display: flex;
-        width: 50vh;
+        width: 65vh;
         margin: 0 auto; 
         margin-top:2rem;
         margin-bottom:3rem;
