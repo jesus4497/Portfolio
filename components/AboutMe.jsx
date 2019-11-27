@@ -16,9 +16,11 @@ const AboutStyles = styled.section`
         margin-top: 5rem;
 
        p{
-           font-size:1.3rem;
-
-           
+            width: 65vh;
+            font-size:1.2rem;
+            @media screen and (max-width: 600px){
+                width: auto;
+            }    
        }
         img{
             height: 15rem;
@@ -42,8 +44,8 @@ const AboutMe = () => (
             
             <img  src='/img/perfil.png' alt="Perfil"/>
                 <p>
-                   Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience<br/>
-                   in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering<br/>
+                   Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience
+                   in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering
                    graduate. Looking to join high-performing teams.
                 </p>
         </div>
