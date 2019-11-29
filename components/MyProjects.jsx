@@ -51,7 +51,7 @@ const MyProjects = () =>(
             />
             <Project 
                 title="Video App" 
-                description="A web app in which shows the user the 7 most trending movies of the genre of horror using React, Redux, Sass" 
+                description="A web app in which shows the user the 7 most trending movies of the horror genre using React, Redux, Sass" 
                 imag={'videoApp'} 
                 demo={'https://jesus4497.github.io/'}
                 git={'https://github.com/jesus4497/videoApp'}
