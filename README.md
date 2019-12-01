@@ -2,6 +2,7 @@
 My personal portfolio
 # Technologies
 - ReactJS
+- Apollo
 - Next.js
 - JavaScript
 - Styled-components
