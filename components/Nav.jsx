@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import {useQuery} from '@apollo/react-hooks';
-import { FOCUS_NAV_QUERY } from '../locales/resolvers';
+import { FOCUS_NAV_QUERY } from '../locales/queries';
 import styled from 'styled-components';
 import Link from 'next/link';
 

@@ -5,8 +5,6 @@ import { useInView } from 'react-intersection-observer';
 import SkillsIcons from './SkillsIcons';
 import styled from 'styled-components';
 import getIcons from '../lib/getIcons'
-import { isContext } from 'vm';
-
 
 const SkillsStyles = styled.section`
     text-align: center;
