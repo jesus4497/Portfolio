@@ -9,7 +9,7 @@ const Image = styled.div`
         position: absolute;
         z-index: 1;
         width: 120px;
-        background-color: black;
+        background-color: ${props => props.theme.secondaryColor};
         color: #fff;
         text-align: center;
         border-radius: 6px;

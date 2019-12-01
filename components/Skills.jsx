@@ -144,7 +144,7 @@ const Skills = () => {
     });
 
     const [ref, inView] = useInView({
-        threshold: 1,
+        threshold: .8,
     })
 
     useEffect(() => {

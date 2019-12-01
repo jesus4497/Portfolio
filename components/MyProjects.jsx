@@ -68,7 +68,7 @@ const MyProjects = () =>{
     });
 
     const [ref, inView] = useInView({
-        threshold: 0.5,
+        threshold: .4,
     })
 
     useEffect(() => {
