@@ -1,4 +1,9 @@
+import {useEffect} from 'react';
+import { useMutation } from '@apollo/react-hooks';
+import {useInView} from 'react-intersection-observer';
+import { FOCUS_NAV_QUERY, FOCUS_NAV_MUTATION } from '../locales/resolvers';
 import styled from 'styled-components';
+
 
 const AboutStyles = styled.section`
     max-height: 100vh;
@@ -38,18 +43,54 @@ const AboutStyles = styled.section`
 
 `;
 
-const AboutMe = () => (
-    <AboutStyles id='aboutme'>
-        <div className="about">
-            
-            <img  src='/img/perfil.png' alt="Perfil"/>
-                <p>
-                   Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience
-                   in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering
-                   graduate. Looking to join high-performing teams.
-                </p>
-        </div>
-    </AboutStyles>
-)
+
+const AboutMe = () => {
+    const [updateFocus] = useMutation(FOCUS_NAV_MUTATION,{
+        update: cache => {
+            const data = cache.readQuery({
+              query: FOCUS_NAV_QUERY
+            });
+    
+            const dataClone = {
+              ...data,
+              focus: {
+                ...data.focus,
+                about: true,
+                skills: false,
+                projects: false,
+                contact: false,
+              }
+            };
+    
+            cache.writeQuery({
+              query: FOCUS_NAV_QUERY,
+              data: dataClone
+            });
+          }
+    });
+    const [ref, inView] = useInView({
+        threshold: 1,
+    })
+
+    useEffect(() => {
+        updateFocus();
+        return;
+    },[inView])
+
+
+    return(
+        <AboutStyles ref={ref} id='aboutme'>
+            <div className="about">
+                
+                <img  src='/img/perfil.png' alt="Perfil"/>
+                    <p>
+                        Hi ! I'm Jesus Padron an enthusiastic frontend developer with project experience
+                        in React, Node.js, JavaScript, PHP, MongoDB among others.  Computer Engineering
+                        graduate. Looking to join high-performing teams.
+                    </p>
+            </div>
+        </AboutStyles>  
+    )
+}
 
 export default AboutMe;

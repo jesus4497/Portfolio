@@ -97,18 +97,18 @@ const Project = ({ link, title, description, imag, demo, git}) => (
               <p>{description}</p> 
 
               <div className="buttonList">
-                  <Link href={git}>
+                  <Link href={git} prefetch={false}>
                       <a>View Code</a>
                   </Link>
                   { demo &&
-                  <Link href={demo}>
+                  <Link href={demo} prefetch={false}>
                     <a>View Demo</a>
                   </Link>
                   }
                   
 
               </div>
-          </Item>
+        </Item>
     </Tilt>
   </Slide>
    

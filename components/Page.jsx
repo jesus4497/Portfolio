@@ -1,4 +1,4 @@
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Meta from './Meta';
 import Header from './Header';
 import Footer from './Footer';

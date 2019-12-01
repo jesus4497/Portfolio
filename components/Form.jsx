@@ -144,7 +144,7 @@ const Form = () => {
                     <button type="submit" disabled={status.submitting} >
                         {
                             !status.submitting ? 
-                            !status.submitted ? 'Submit'
+                            !status.submitted ? 'Send Message'
                             : 'Submitted'
                             :'Submitting...'
                         }

@@ -1,3 +1,4 @@
+import React from 'react'
 import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
 import MyProjects from '../components/MyProjects';
