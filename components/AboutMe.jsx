@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import {useInView} from 'react-intersection-observer';
-import { FOCUS_NAV_QUERY, FOCUS_NAV_MUTATION } from '../locales/resolvers';
+import { FOCUS_NAV_QUERY, FOCUS_NAV_MUTATION } from '../locales/queries';
 import styled from 'styled-components';
 
 
