@@ -1,3 +1,7 @@
+import { useEffect } from 'react';
+import { useMutation } from '@apollo/react-hooks';
+import { FOCUS_NAV_QUERY, FOCUS_NAV_MUTATION } from '../locales/queries';
+import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Tilt from 'react-tilt';
@@ -78,40 +82,76 @@ const Title = styled.h1`
     }
 `;
     
-const Project = ({ link, title, description, imag, demo, git}) => (
-  <Slide>
+const Project = ({ link, title, description, imag, demo, git}) => {
+  const [updateFocus] = useMutation(FOCUS_NAV_MUTATION,{
+    update: cache => {
+        const data = cache.readQuery({
+          query: FOCUS_NAV_QUERY
+        });
 
-  
-    <Tilt 
-      className="Tilt" 
-      options={{ 
-        max : 15,
-        perspective: 1500,
-      }} 
-    >
-      <Item>
-              <Carousel title={title} img={imag} />
-              <Title>
-                <a href={link}>{title}</a>
-              </Title>
-              <p>{description}</p> 
+        const dataClone = {
+          ...data,
+          focus: {
+            ...data.focus,
+            about: false,
+            skills: false,
+            projects: true,
+            contact: false,
+          }
+        };
 
-              <div className="buttonList">
-                  <Link href={git} prefetch={false}>
-                      <a>View Code</a>
-                  </Link>
-                  { demo &&
-                  <Link href={demo} prefetch={false}>
-                    <a>View Demo</a>
-                  </Link>
-                  }
-                  
+        cache.writeQuery({
+          query: FOCUS_NAV_QUERY,
+          data: dataClone
+        });
+      }
+});
 
-              </div>
-        </Item>
-    </Tilt>
-  </Slide>
+const [ref, inView] = useInView({
+    threshold: .9,
+})
+
+useEffect(() => {
+    updateFocus();
+    return;
+},[inView])
+
+
+  return(
+    <Slide>
+
+    
+      <Tilt 
+        className="Tilt" 
+        options={{ 
+          max : 15,
+          perspective: 1500,
+        }} 
+      >
+        <Item  ref={ref}>
+                <Carousel title={title} img={imag} />
+                <Title>
+                  <a href={link}>{title}</a>
+                </Title>
+                <p>{description}</p> 
+
+                <div className="buttonList">
+                    <Link href={git} prefetch={false}>
+                        <a>View Code</a>
+                    </Link>
+                    { demo &&
+                    <Link href={demo} prefetch={false}>
+                      <a>View Demo</a>
+                    </Link>
+                    }
+                    
+
+                </div>
+          </Item>
+      </Tilt>
+    </Slide>
    
-)
+  )
+}
 
 export default Project

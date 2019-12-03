@@ -144,7 +144,7 @@ const Skills = () => {
     });
 
     const [ref, inView] = useInView({
-        threshold: .8,
+        threshold: 1,
     })
 
     useEffect(() => {
@@ -153,7 +153,7 @@ const Skills = () => {
     },[inView])
 
     return(
-        <SkillsStyles ref={ref} id='skills'>
+        <SkillsStyles id='skills'>
             <h1>Skills</h1>
             
             <div className="skills">
@@ -194,7 +194,7 @@ const Skills = () => {
                 </div>
                 
             </div>
-            <p> 
+            <p ref={ref}> 
                 I have been focusing on Web Development for almost 3 years now, throughout my years of experience I have been able to work with
                 multiples technologies. However I focus in the JavaScript enviroment so I use it for the Front-end as well as for the Back-end. 
             </p>

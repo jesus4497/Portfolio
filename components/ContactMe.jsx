@@ -98,7 +98,7 @@ const ContactMe = () => {
     });
 
     const [ref, inView] = useInView({
-        threshold: .5,
+        threshold: .8,
     })
 
     useEffect(() => {
